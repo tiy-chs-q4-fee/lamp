@@ -1,0 +1,31 @@
+$yellow:#EAF3C4;
+$red:#D26F46;
+$blue:#7BB7AD;
+$green:#807E58;
+$brown:#5F5A44;
+
+body{
+  margin:0;
+  padding:0;
+  background-color:$blue;
+}
+header{
+  background-color:$red;
+  padding:1% 2%;
+  span{
+    float:right;
+    font-size:2.5em;
+    margin:0;
+    padding:0;
+  }
+  a{
+    color:$yellow;
+  }
+  h1{
+    color:$yellow;
+    display:inline-block;
+    margin:0;
+    padding:0;
+  }
+
+}

@@ -1,0 +1,28 @@
+<h2>Add a new recipe:</h2>
+<section>
+<form action="">
+  <h3>Ingredients:</h3>
+  <input type="text" placeholder="1/2">
+  <select>
+    <option value="cup">Cups</option>
+    <option value="tbsp">Tablespoons</option>
+    <option value="tsp">Teaspoons</option>
+    <option value="pints">Pints</option>
+    <option value="qts">Quarts</option>
+    <option value="gallons">Gallons</option>
+  </select>
+  <input type="text" placeholder="Ingredient">
+  <button>Add</button>
+  <h3>Instructions:</h3>
+  <textarea ng-model="newRecipe.instructions" name="" id="" cols="30" rows="10">Instructions</textarea>
+  <button type="submit">Finish Recipe</button>
+
+</form>
+</section>
+<aside>
+
+  <h2>Recipe Preview:</h2>
+  <p>{{newRecipe.instructions}}</p>
+
+
+</aside>

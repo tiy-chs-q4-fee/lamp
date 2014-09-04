@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recipe App</title>
+  <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body ng-app="recipeApp-modules">
+  <header>
+    <h1>spatch</h1>
+    <a href="#/addRecipe"><span>+</span></a>
+  </header>
+  <div class="container">
+    <ng-view></ng-view>
+  </div>
+
+
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/recipeCtrl.js"></script>
+</body>
+</html>
