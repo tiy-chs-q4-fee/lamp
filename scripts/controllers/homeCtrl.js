@@ -4,5 +4,15 @@ angular.module("recipeApp-modules.controllers")
 
     $scope.posts = postService.getPosts();
 
+    $scope.deleteRecipe = function(post){
+      $scope.posts.splice(post, 1);
+      console.log("deleting");
+    }
+
+    // $scope.addToGList = function(post){
+    //   $scope.items.push($scope.posts.indexOf(post));
+    //   console.log("adding to list");
+    // }
+
 
   });
