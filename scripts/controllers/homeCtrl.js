@@ -5,7 +5,7 @@ angular.module("recipeApp-modules.controllers")
     $scope.posts = postService.getPosts();
 
     $scope.deleteRecipe = function(post){
-      $scope.posts.splice($scope.posts.indexOf(post), 1);
+      $scope.posts.splice(post, 1);
       console.log("deleting");
     }
 
