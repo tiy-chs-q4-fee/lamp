@@ -3,11 +3,10 @@ angular.module("recipeApp-modules.services")
     var posts = [
     {
       title: "Peanut Butter & Jelly Sandwich",
-      ingredients: [
-      {
+      ingredients: [{
         name: "bread slices",
         amount: 2,
-        type:
+        type: null
       },
       {
         name: "peanut butter",
@@ -18,8 +17,7 @@ angular.module("recipeApp-modules.services")
         name: "jelly",
         amount: 1,
         type: "tablespoons"
-      }
-      ],
+      }],
       directions: "Spread peanut butter on one slice of bread and jelly on the other then put the slices together, ingredients facing each other."
     },
     {
@@ -27,8 +25,8 @@ angular.module("recipeApp-modules.services")
       ingredients: [{
         name: "flour tortilla",
         amount: 2,
-        type:
-      },
+        type: null
+    },
       {
         name: "shredded Mexican blend cheese",
         amount: 1/2,
