@@ -4,6 +4,6 @@ angular.module("recipeApp-modules.controllers")
     $scope.newPost = function (post) {
         postsService.createPost(post);
 
-        $location.("/");
+        // $location.path("/");
       };
   });
