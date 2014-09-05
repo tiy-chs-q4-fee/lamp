@@ -3,7 +3,9 @@ angular.module("recipeApp-modules.services")
     var posts = [
     {
       title: "Peanut Butter & Jelly Sandwich",
+
       ingredients: [{
+
         name: "bread slices",
         amount: 2,
         type: null
@@ -33,7 +35,9 @@ angular.module("recipeApp-modules.services")
         type: "cup"
       }],
       directions: "Sprinkle cheese on one tortilla. Add second tortilla on top. Heat a greased pan to medium temperature, then add the tortillas. Let heat until cheese begins to melt, then flip several times until fully melted. The tortillas should be lightly browned. Remove from pan, cut, and serve."
+
     }];
+
 
     var getPosts = function () {
         return posts;
