@@ -21,4 +21,4 @@ angular.module("recipeApp-modules.controllers")
             return !item.done;
         });
     };
-}
+});

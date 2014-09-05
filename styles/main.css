@@ -27,3 +27,8 @@ img.bg {
   top: 0;
   left: 0;
   z-index: -1; }
+
+.groceryWrap {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-family: 'Cutive', serif; }
