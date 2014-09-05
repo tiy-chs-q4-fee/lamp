@@ -1,5 +1,6 @@
-angular.module("tiy-ng-modules.services")
-  .factory("postsService", function () {
+angular.module("recipeApp-modules.services")
+  .factory("postService", function () {
+
     var posts = [];
     var getPosts = function () {
         return posts;

@@ -1,4 +1,4 @@
-angular.module("recipeApp-modules.controllers");
-  controller.("editController", function ($scope, $location, postsService) {
-    $scope.posts = postsService.getPosts(post);
+angular.module("recipeApp-modules.controllers")
+  .controller("editController", function ($scope, $location,postService) {
+    $scope.posts = postService.getPosts();
   });

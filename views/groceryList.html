@@ -3,9 +3,10 @@
 <form action="">
   <h3>Items:</h3>
 
-</section>
-<aside>
+<div ng-controller="groceryController">
+  <section ng-repeat="item in items">
+    <p>{{item.amount}}</p>
+    <h2>{{item.title}}</h2>
+  </section>
 
-  
-
-</aside>
+</div>
