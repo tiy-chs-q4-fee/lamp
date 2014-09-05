@@ -11,6 +11,11 @@ angular.module("recipeApp-modules", ["recipeApp-modules.controllers", "recipeApp
       templateUrl:"views/recipeForm.html",
       controller:"addController"
     })
+    .when("/groceryList",
+    {
+      templateUrl:"views/groceryList.html",
+      controller: "CONTROLLERNAME"
+    })
     .when("/editRecipe",
     {
       templateUrl: "views/recipeEdit.html",
