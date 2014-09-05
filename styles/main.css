@@ -51,6 +51,8 @@ img.bg {
   margin-top: 10%; }
 
 .groceryWrap {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(104, 92, 97, 0.7);
+  border: 1px solid white;
+  border-radius: 10px;
   color: white;
   font-family: 'Cutive', serif; }
