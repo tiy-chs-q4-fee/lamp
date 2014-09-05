@@ -14,7 +14,7 @@ angular.module("recipeApp-modules", ["recipeApp-modules.controllers", "recipeApp
     .when("/groceryList",
     {
       templateUrl:"views/groceryList.html",
-      controller: "CONTROLLERNAME"
+      controller: "groceryController"
     })
     .otherwise({
       redirectTo: "/notFound"
