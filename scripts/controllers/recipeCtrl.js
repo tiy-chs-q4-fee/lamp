@@ -11,4 +11,6 @@ angular.module("recipeApp-modules.controllers")
     //     $location.("/");
     //
     //   };
+        // $location.path("/");
+      };
   });

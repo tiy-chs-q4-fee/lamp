@@ -14,16 +14,21 @@ angular.module("recipeApp-modules", ["recipeApp-modules.controllers", "recipeApp
     .when("/groceryList",
     {
       templateUrl:"views/groceryList.html",
-      //controller: "CONTROLLERNAME"
+      controller: "groceryController"
     })
     .when("/editRecipe",
     {
       templateUrl: "views/recipeEdit.html",
       controller: "editController"
     })
+    .when("/notFound",
+    {
+      templateUrl: "views/home.html",
+    })
     .otherwise({
-      redirectTo: "/notFound"
-    });
+      redirectTo:"/notFound",
+    })
+
   });
   angular.module("recipeApp-modules.controllers", []);
   angular.module("recipeApp-modules.services", []);
