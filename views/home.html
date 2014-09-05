@@ -11,20 +11,26 @@
             {{recipe.title}} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
         </accordion-heading>
         <div ng-repeat="ingredient in recipe.ingredients">
-          {{ingredient.amount}} {{ingredient.type}} {{ingredient.name}} 
+          {{ingredient.amount}} {{ingredient.type}} {{ingredient.name}}
         </div>
 
         {{recipe.directions}}
+        <div>
+
+        <button class="homeButtons" ng-click="addToGList()">Add</button>
+        <button class="homeButtons" ng-click="deleteRecipe()">Delete</button>
+
+      </div>
     </accordion-group>
   </accordion>
 
 
-<div class="name">
 
-<button class="homeButtons" ng-click="goToRecipe()">Go To Recipe</button>
+
+<!-- <button class="homeButtons" ng-click="goToRecipe()">Go To Recipe</button>
 <button class="homeButtons" ng-click="deleteRecipe()">Delete Recipe</button>
-<button class="homeButtons" ng-click="addToGList()">Add to Grocery List</button>
+<button class="homeButtons" ng-click="addToGList()">Add to Grocery List</button> -->
 
-</div>
+
 
 </div>
