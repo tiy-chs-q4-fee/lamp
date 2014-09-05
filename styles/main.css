@@ -3,20 +3,11 @@ body {
   padding: 0;
   background-color: #7BB7AD; }
 
+h2 {
+  color: white; }
+
 header {
-  padding: 1% 2%; }
-  header span {
-    float: right;
-    font-size: 2.5em;
-    margin: 0;
-    padding: 0; }
-  header a {
-    color: #EAF3C4; }
-  header h1 {
-    color: #EAF3C4;
-    display: inline-block;
-    margin: 0;
-    padding: 0; }
+  text-align: center; }
 
 img.bg {
   min-height: 100%;
@@ -27,3 +18,21 @@ img.bg {
   top: 0;
   left: 0;
   z-index: -1; }
+
+#homeLogo {
+  opacity: 0.8;
+  width: 40%;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto; }
+
+.fa {
+  font-size: 4em;
+  color: white;
+  margin: 0px;
+  margin-right: 5px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out; }
+
+.fa:hover {
+  opacity: 1; }
