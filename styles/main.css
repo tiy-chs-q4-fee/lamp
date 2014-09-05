@@ -1,13 +1,17 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #7BB7AD; }
+  color: white; }
 
 h2 {
   color: white; }
 
-header {
-  text-align: center; }
+footer {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  bottom: 1px; }
 
 img.bg {
   min-height: 100%;
@@ -30,6 +34,7 @@ img.bg {
   font-size: 4em;
   color: white;
   margin: 0px;
+  margin-top: 5px;
   margin-right: 5px;
   opacity: 0.8;
   transition: opacity 0.3s ease-in-out; }

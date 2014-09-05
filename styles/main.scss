@@ -7,15 +7,19 @@ $brown:#5F5A44;
 body {
   margin:0;
   padding:0;
-  background-color:$blue;
+  color:white;
 }
 
 h2 {
     color:white;
 }
 
-header {
+footer {
+    position:fixed;
+    width:100%;
+    background-color:rgba(255,255,255,.1);
     text-align:center;
+    bottom:1px;
 
 }
 
