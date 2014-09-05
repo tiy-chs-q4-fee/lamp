@@ -1,10 +1,10 @@
-angular.module("recipeApp-modules", ["recipeApp-modules.controllers", "recipeApp-modules.services", "ngRoute" ])
+angular.module("recipeApp-modules", ["recipeApp-modules.controllers", "recipeApp-modules.services", "ngRoute", "ui.bootstrap" ])
   .config(function($routeProvider){
     $routeProvider
     .when("/",
     {
       templateUrl: "views/home.html",
-      controller: "CONTROLLERNAME"
+      controller: "homeCtrl"
     })
     .when("/addRecipe",
     {
@@ -16,9 +16,19 @@ angular.module("recipeApp-modules", ["recipeApp-modules.controllers", "recipeApp
       templateUrl:"views/groceryList.html",
       controller: "groceryController"
     })
+    .when("/editRecipe",
+    {
+      templateUrl: "views/recipeEdit.html",
+      controller: "editController"
+    })
+    .when("/notFound",
+    {
+      templateUrl: "views/home.html",
+    })
     .otherwise({
-      redirectTo: "/notFound"
-    });
+      redirectTo:"/notFound",
+    })
+
   });
   angular.module("recipeApp-modules.controllers", []);
   angular.module("recipeApp-modules.services", []);
