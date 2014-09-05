@@ -4,7 +4,7 @@ angular.module("recipeApp-modules", ["recipeApp-modules.controllers", "recipeApp
     .when("/",
     {
       templateUrl: "views/home.html",
-      controller: "CONTROLLERNAME"
+      controller: "homeCtrl"
     })
     .when("/addRecipe",
     {
@@ -16,6 +16,11 @@ angular.module("recipeApp-modules", ["recipeApp-modules.controllers", "recipeApp
       templateUrl:"views/groceryList.html",
       controller: "CONTROLLERNAME"
     })
+    .when("/editRecipe",
+    {
+      templateUrl: "views/recipeEdit.html",
+      controller: "editController"
+    });
     .otherwise({
       redirectTo: "/notFound"
     });
