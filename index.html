@@ -5,23 +5,33 @@
   <title>Recipe App</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body ng-app="recipeApp-modules">
-    <img src="images/bg.png" class="bg">
 
-  <header>
-    <h1><a href="#/home">spatch</a></h1>
-    <a href="#/addRecipe"><span>+</span></a>
-    <a href="#/groceryList"><span><img src="http://cdn.flaticon.com/png/256/8819.png"/ width=30px ></span></a>
-  </header>
+<img src="images/bg.png" class="bg">
+
+    <header>
+      <span><a href="#"><img src="images/logo.png" id="homeLogo"></a></span><br>
+      <a href="#/addRecipe"><i class="fa fa-plus"></i></a>
+      <a href="#/groceryList"><i class="fa fa-shopping-cart"></i></a>
+
+    </header>
+
+
 
   <div class="container">
     <ng-view></ng-view>
+
   </div>
 
 
-<!--TEST-->
+
+
+
+
+
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/angular-route/angular-route.min.js"></script>
 
