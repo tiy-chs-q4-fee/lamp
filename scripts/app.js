@@ -11,6 +11,11 @@ angular.module("recipeApp-modules", ["recipeApp-modules.controllers", "recipeApp
       templateUrl:"views/recipeForm.html",
       controller:"CONTROLLERNAME"
     })
+    .when("/groceryList",
+    {
+      templateUrl:"views/groceryList.html",
+      controller: "CONTROLLERNAME"
+    })
     .otherwise({
       redirectTo: "/notFound"
     });
