@@ -13,9 +13,7 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.2.23",
-    "angular-route": "~1.2.23",
-    "ui-bootstrap": "~0.11.0",
-    "angular-bootstrap": "~0.11.0"
-  }
+    "angular-underscore-module": "*"
+  },
+  "homepage": "https://github.com/lizkline91/lamp"
 }

@@ -2,8 +2,8 @@
 <div class="groceryWrap" ng-controller="groceryController">
 <h2>Groceries:<h2>
   <ul>
-    <li ng-repeat="item in items">
-      <input type="checkbox" ng-model="item.done"/><span class="done-{{item.done}}">{{item.text}}</span>
+    <li ng-repeat="item in finalIngreds">
+      <span>{{item}}</span>
     </li>
   </ul>
   <form>
