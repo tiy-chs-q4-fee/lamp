@@ -4,8 +4,8 @@
   <h3>Title:</h3>
   <input type="text" ng-model="newRecipe.title">
   <h3>Ingredients:</h3>
-  <input type="text" ng-model="newRecipe.ingredient.mesNumber" placeholder="1/2">
-  <select ng-model="newRecipe.ingredient.mesType">
+  <input type="text" ng-model="ingredients.amount" placeholder="1/2">
+  <select ng-model="ingredients.type">
     <option value="cup">Cups</option>
     <option value="tbsp">Tablespoons</option>
     <option value="tsp">Teaspoons</option>
@@ -13,8 +13,13 @@
     <option value="qts">Quarts</option>
     <option value="gallons">Gallons</option>
   </select>
-  <input type="text" placeholder="Ingredient" ng-model="newRecipe.ingredient.type">
-  <button ng-click="addIngredient(newRecipe.ingredient)">Add</button>
+  <input type="text" placeholder="Ingredient" ng-model="ingredients.name">
+  <button ng-click="addIngredient(ingredients)">Add</button>
+  <ul>
+    <li ng-repeat="ingredient in ingredientArray">
+      <h4>{{ingredient.amount}} {{ingredient.type}} {{ingredient.name}} </h4>
+    </li>
+  </ul>
   <h3>Instructions:</h3>
   <textarea ng-model="newRecipe.instructions" name="" id="" cols="30" rows="10">Instructions</textarea>
   <input type="submit" ng-click="recipeSubmit(newRecipe)">Finish Recipe</input>
@@ -24,7 +29,9 @@
   <h2>Recipe Preview:</h2>
   <h3>{{newRecipe.title}}</h3>
   <ul>
-    <li>{{newRecipe.ingredient.mesNumber}} {{newRecipe.ingredient.mesType}} {{newRecipe.ingredient.type}}</li>
+    <li ng-repeat="ingredient in ingredientArray">
+      <h4>{{ingredient.amount}} {{ingredient.type}} {{ingredient.name}} </h4>
+    </li>
   </ul>
   <h3>Directions</h3>
   <p>{{newRecipe.instructions}}</p>

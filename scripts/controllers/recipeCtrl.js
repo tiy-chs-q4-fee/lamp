@@ -4,11 +4,28 @@ angular.module("recipeApp-modules.controllers")
 
     $scope.getPosts = postService.getPosts();
 
+    $scope.ingredientArray = [];
+
     $scope.recipeSubmit = function (recipe) {
 
-        postService.createPost(recipe);
+      postService.createPost({
 
-        // $location.path("/");
+      title: recipe.title,
+      ingredients: $scope.ingredientArray,
+      directions: recipe.instructions
+
+      });
+
+      $location.path("/");
 
       };
+
+    $scope.addIngredient = function(ingredient) {
+
+      $scope.ingredientArray.push(ingredient);
+      $scope.ingredients = {};
+
+      console.log($scope.ingredientArray);
+
+    };
   });
