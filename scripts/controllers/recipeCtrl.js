@@ -1,16 +1,14 @@
 angular.module("recipeApp-modules.controllers")
 
-  .controller("addController", function($scope, $location, postService){
+  .controller("addController", function($scope, $location,postService){
 
-    //$scope.getPost = postService.getPost();
+    $scope.getPosts = postService.getPosts();
 
-    // $scope.newPost = function (post) {
-    //
-    //     postsService.createPost(post);
-    //
-    //     $location.("/");
-    //
-    //   };
-        // $location.path("/");
-    //  };
+    $scope.newPost = function (post) {
+
+        postsService.createPost(post);
+
+        $location.path("/");
+
+      };
   });
