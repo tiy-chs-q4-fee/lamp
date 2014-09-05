@@ -4,7 +4,7 @@ $blue:#7BB7AD;
 $green:#807E58;
 $brown:#5F5A44;
 
-body{
+body {
   margin:0;
   padding:0;
   background-color:$blue;
@@ -29,3 +29,13 @@ header{
   }
 
 }
+img.bg {
+  min-height: 100%;
+  min-width: 100%;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index:-1;
+  }

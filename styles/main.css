@@ -1,10 +1,10 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #7bb7ad; }
+  background-color: #7BB7AD; }
 
 header {
-  background-color: #d26f46;
+  background-color: #D26F46;
   padding: 1% 2%; }
   header span {
     float: right;
@@ -12,9 +12,19 @@ header {
     margin: 0;
     padding: 0; }
   header a {
-    color: #eaf3c4; }
+    color: #EAF3C4; }
   header h1 {
-    color: #eaf3c4;
+    color: #EAF3C4;
     display: inline-block;
     margin: 0;
     padding: 0; }
+
+img.bg {
+  min-height: 100%;
+  min-width: 100%;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1; }
