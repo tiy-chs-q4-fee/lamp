@@ -14,13 +14,13 @@ angular.module("recipeApp-modules", ["recipeApp-modules.controllers", "recipeApp
     .when("/groceryList",
     {
       templateUrl:"views/groceryList.html",
-      controller: "CONTROLLERNAME"
+      //controller: "CONTROLLERNAME"
     })
     .when("/editRecipe",
     {
       templateUrl: "views/recipeEdit.html",
       controller: "editController"
-    });
+    })
     .otherwise({
       redirectTo: "/notFound"
     });
