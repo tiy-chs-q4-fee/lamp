@@ -9,7 +9,7 @@ angular.module("recipeApp-modules", ["recipeApp-modules.controllers", "recipeApp
     .when("/addRecipe",
     {
       templateUrl:"views/recipeForm.html",
-      controller:"CONTROLLERNAME"
+      controller:"addController"
     })
     .otherwise({
       redirectTo: "/notFound"
