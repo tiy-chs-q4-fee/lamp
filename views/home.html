@@ -1,36 +1,40 @@
-<h1>Welcome to our app</h1>
-
-
 
 <div ng-controller="homeCtrl">
-
-
+<div class="homeWrap">
+<h2>Recipes</h2>
 <accordion close-others="oneAtATime">
+    <div class="accHead">
     <accordion-group is-open="status.open" ng-repeat="recipe in posts">
         <accordion-heading>
+
             {{recipe.title}} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+
         </accordion-heading>
         <div ng-repeat="ingredient in recipe.ingredients">
           {{ingredient.amount}} {{ingredient.type}} {{ingredient.name}}
         </div>
 
         {{recipe.directions}}
+
         <div>
 
         <button class="homeButtons" ng-click="addToGList()">Add</button>
         <button class="homeButtons" ng-click="deleteRecipe()">Delete</button>
 
       </div>
+
+
+
+
     </accordion-group>
+    </div>
   </accordion>
 
 
 
 
-<!-- <button class="homeButtons" ng-click="goToRecipe()">Go To Recipe</button>
-<button class="homeButtons" ng-click="deleteRecipe()">Delete Recipe</button>
-<button class="homeButtons" ng-click="addToGList()">Add to Grocery List</button> -->
 
 
 
+</div>
 </div>
