@@ -26,7 +26,7 @@ angular.module("recipeApp-modules.services")
         name: "flour tortilla",
         amount: 2,
         type: null
-      },
+    },
       {
         name: "shredded Mexican blend cheese",
         amount: 1/2,

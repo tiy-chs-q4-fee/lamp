@@ -10,7 +10,11 @@
         <accordion-heading>
             {{recipe.title}} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
         </accordion-heading>
-        This is just some content to illustrate fancy headings.
+        <div ng-repeat="ingredient in recipe.ingredients">
+          {{ingredient.amount}} {{ingredient.type}} {{ingredient.name}} 
+        </div>
+
+        {{recipe.directions}}
     </accordion-group>
   </accordion>
 
