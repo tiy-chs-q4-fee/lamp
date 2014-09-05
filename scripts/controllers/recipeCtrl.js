@@ -4,11 +4,11 @@ angular.module("recipeApp-modules.controllers")
 
     $scope.getPosts = postService.getPosts();
 
-    $scope.newPost = function (post) {
+    $scope.recipeSubmit = function (recipe) {
 
-        postsService.createPost(post);
+        postService.createPost(recipe);
 
-        $location.path("/");
+        // $location.path("/");
 
       };
   });
