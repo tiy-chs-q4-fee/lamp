@@ -12,7 +12,7 @@ angular.module("recipeApp-modules.controllers")
 
 
     $scope.additem = function () {
-      $scope.finalIngreds.push($scope.formitemText);
+      $scope.groceryList.push($scope.formitemText);
       $scope.formitemText = '';
     };
 
