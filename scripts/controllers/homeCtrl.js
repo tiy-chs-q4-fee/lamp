@@ -4,6 +4,7 @@ angular.module("recipeApp-modules.controllers")
 
     $scope.posts = postService.getPosts();
     $scope.groceryList = postService.groceryList;
+    $scope.disabled = false;
 
     console.log($scope.posts);
 
@@ -20,6 +21,8 @@ angular.module("recipeApp-modules.controllers")
         $scope.groceryList.push($scope.posts[index].ingredients[i]);
 
       };
+
+      $scope.disabled = true;
 
     };
 

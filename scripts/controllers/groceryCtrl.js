@@ -16,7 +16,7 @@ angular.module("recipeApp-modules.controllers")
 
         name:item.name,
         amount:item.amount,
-        type:item.type
+        type:null
 
       });
 
@@ -26,5 +26,5 @@ angular.module("recipeApp-modules.controllers")
     $scope.deleteGrocery = function(index) {
       $scope.groceryList.splice(index, 1);
     };
-    
+
   });
