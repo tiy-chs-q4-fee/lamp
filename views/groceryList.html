@@ -1,6 +1,6 @@
 
 <div class="groceryWrap" ng-controller="groceryController">
-<h2>Groceries:<h2>
+<h2>Groceries:</h2>
   <ul>
     <li ng-repeat="item in groceryList">
       <div ng-if="item.type != null">
@@ -18,14 +18,15 @@
     <h3>Add grocery item:</h3>
     <input type="text" ng-model="groceryItem.amount" placeholder="1/2">
     <select ng-model="groceryItem.type">
-      <option value="cup">Cups</option>
-      <option value="tbsp">Tablespoons</option>
-      <option value="tsp">Teaspoons</option>
-      <option value="pints">Pints</option>
-      <option value="qts">Quarts</option>
-      <option value="gallons">Gallons</option>
+      <option value="">_</option>
+      <option value="cup">cups</option>
+      <option value="tbsp">tbsp</option>
+      <option value="tsp">tsp</option>
+      <option value="pints">pints</option>
+      <option value="qts">quarts</option>
+      <option value="gallons">gallons</option>
     </select>
     <input type="text" placeholder="Ingredient" ng-model="groceryItem.name">
-    <button class="add-btn" ng-click="additem(groceryItem)"><h2>Add</h2></button>
+    <button class="add-btn" ng-click="additem(groceryItem)">Add</button>
   </form>
 </div>
