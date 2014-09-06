@@ -47,9 +47,16 @@ angular.module("recipeApp-modules.services")
 
     };
 
+    var createPost = function (newPost) {
+
+          posts.push(newPost);
+
+        };
+
     // return methods
     return {
       getPosts: getPosts,
       groceryList: groceryList,
+      createPost: createPost,
     };
   });
