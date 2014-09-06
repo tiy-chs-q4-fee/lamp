@@ -11,14 +11,20 @@ angular.module("recipeApp-modules.controllers")
     };
 
 
-    $scope.additem = function () {
-      $scope.groceryList.push($scope.formitemText);
-      $scope.formitemText = '';
+    $scope.additem = function (item) {
+      $scope.groceryList.push({
+
+        name:item.name,
+        amount:item.amount,
+        type:item.type
+
+      });
+
+      $scope.groceryItem = {};
     };
 
-      $scope.clearCompleted = function () {
-          $scope.items = _.filter($scope.items, function(item){
-              return !item.done;
-          });
-      };
+    $scope.deleteGrocery = function(index) {
+      $scope.groceryList.splice(index, 1);
+    };
+    
   });
