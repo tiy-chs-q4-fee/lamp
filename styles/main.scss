@@ -5,6 +5,7 @@ html, body {
     background-image:url("../images/bg.png");
     background-size:cover;
     background-repeat:no-repeat;
+    overflow:hidden;
 }
 
 
@@ -79,12 +80,19 @@ img.bg {
      }
  }
 
+ .container {
+     overflow:auto;
+     position:absolute;
+     bottom:1px;
+     height:60%;
+     width:100%;
+ }
+
  .homeWrap{
      font-size:1.2em;
-     margin:10%;
-     margin-top:10%;
-     height:340px;
-     overflow:auto;
+     height:100%;
+     margin-left:10%;
+     margin-right:10%;
  }
 ////////////////////////////////END HOME
 
@@ -104,6 +112,16 @@ img.bg {
     height:60%;
     margin:10px;
     overflow:auto;
+    ul {
+        color:white;
+    }
+    h2 {
+        text-align:center;
+        text-decoration:underline;
+    }
+    h3 {
+        font-weight:lighter;
+    }
 
 }
 
@@ -112,15 +130,18 @@ section {
     width:49%;
     background-color:rgba(0,0,0,.4);
     padding:10px;
-    ul {
-        color:white;
+    .col1 {
+        display:inline-block;
+        width:230px;
+        margin: 0; padding:0;
     }
-    h2 {
-        text-decoration:underline;
+    .col2 {
+        display:inline-block;
+        width:230px;
+        margin: 0; padding:0;
+        vertical-align:top;
     }
-    h3 {
-        font-weight:lighter;
-    }
+
 }
 
 aside {
@@ -129,15 +150,6 @@ aside {
     background-color:rgba(0,0,0,.4);
     vertical-align:top;
     padding:10px;
-    h2 {
-        text-decoration:underline;
-    }
-    h3 {
-        font-weight:lighter;
-    }
-    ul {
-        color:white;
-    }
     .directions {
         color:white;
         font-size:1.2em;
