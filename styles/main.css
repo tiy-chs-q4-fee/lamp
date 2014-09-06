@@ -1,3 +1,14 @@
+.mycss-animation {
+  -webkit-transition: 1s linear all;
+  -moz-transition: 1s linear all;
+  -o-transition: 1s linear all;
+  transition: 1s linear all;
+  /* future proof */
+  background: red; }
+
+.mycss-animation.mycss-animation-active {
+  background: blue; }
+
 body, html {
   height: 100%;
   background-image: url("../images/bg.png");
@@ -25,7 +36,7 @@ button:hover {
   background-color: #c8c8c8; }
 
 .disabled {
-  opacity: 0.3; }
+  opacity: 0.4; }
 
 .disabled:hover {
   background-color: rgba(255, 255, 255, 0.001); }
