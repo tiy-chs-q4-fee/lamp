@@ -16,16 +16,8 @@
   </ul>
   <form>
     <h3>Add grocery item:</h3>
-    <input type="text" ng-model="groceryItem.amount" placeholder="1/2">
-    <select ng-model="groceryItem.type">
-      <option value="cup">Cups</option>
-      <option value="tbsp">Tablespoons</option>
-      <option value="tsp">Teaspoons</option>
-      <option value="pints">Pints</option>
-      <option value="qts">Quarts</option>
-      <option value="gallons">Gallons</option>
-    </select>
-    <input type="text" placeholder="Ingredient" ng-model="groceryItem.name">
+    <input type="text" ng-model="groceryItem.amount" placeholder="Amount">
+    <input type="text" placeholder="Item" ng-model="groceryItem.name">
     <button class="add-btn" ng-click="additem(groceryItem)"><h2>Add</h2></button>
   </form>
 </div>
