@@ -2,15 +2,12 @@
 <div class="groceryWrap" ng-controller="groceryController">
 <h2>Groceries:<h2>
   <ul>
-    <li ng-repeat="item in items">
-      <input type="checkbox" ng-model="item.done"/><span class="done-{{item.done}}">{{item.text}}</span>
+    <li ng-repeat="item in groceryList">
+      <span>{{item}}</span>
     </li>
   </ul>
   <form>
     <input class="add-input" placeholder="need something else?" type="text" ng-model="formitemText" ng-model-instant/>
     <button class="add-btn" ng-click="additem()"><h2>Add</h2></button>
   </form>
-
-  <button class="clear-btn" ng-click="clearCompleted()">Clear completed</button>
-
 </div>

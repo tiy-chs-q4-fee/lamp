@@ -16,16 +16,22 @@
 
         {{recipe.directions}}
 
-        <div class="name">
+        <div>
 
-        <button class="homeButtons" ng-click="goToRecipe()">Go To Recipe</button>
-        <button class="homeButtons" ng-click="deleteRecipe()">Delete Recipe</button>
-        <button class="homeButtons" ng-click="addToGList()">Add to Grocery List</button>
+        <button class="homeButtons" ng-click="addToGrocery($index)">Add</button>
+        <button class="homeButtons" ng-click="deleteRecipe($index)">Delete</button>
 
-        </div>
+      </div>
+
+
+
+
     </accordion-group>
     </div>
   </accordion>
+
+
+
 
 
 

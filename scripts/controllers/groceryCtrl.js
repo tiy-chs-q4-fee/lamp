@@ -1,24 +1,24 @@
 angular.module("recipeApp-modules.controllers")
 
-  .controller("groceryController", function ($scope) {
-    $scope.items = [
-    {text:'oranges', done:false},
-    {text: 'zuchini', done:false}
-  ];
+  .controller("groceryController", function ($scope, postService, _) {
 
-  $scope.getTotalitems = function () {
-    return $scope.items.length;
-  };
+    $scope.posts = postService.getPosts();
+    $scope.groceryList = postService.groceryList;
 
 
-  $scope.additem = function () {
-    $scope.items.push({text:$scope.formitemText, done:false});
-    $scope.formitemText = '';
-  };
-
-    $scope.clearCompleted = function () {
-        $scope.items = _.filter($scope.items, function(item){
-            return !item.done;
-        });
+    $scope.getTotalitems = function () {
+      return $scope.items.length;
     };
-});
+
+
+    $scope.additem = function () {
+      $scope.finalIngreds.push($scope.formitemText);
+      $scope.formitemText = '';
+    };
+
+      $scope.clearCompleted = function () {
+          $scope.items = _.filter($scope.items, function(item){
+              return !item.done;
+          });
+      };
+  });
