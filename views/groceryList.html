@@ -3,11 +3,29 @@
 <h2>Groceries:<h2>
   <ul>
     <li ng-repeat="item in groceryList">
-      <span>{{item}}</span>
+      <div ng-if="item.type != null">
+        <span>{{item.name}}</span>
+        <i class="fa fa-times fa-1" ng-click="deleteGrocery($index)"></i>
+      </div>
+      <div ng-if="item.type === null">
+        <span>{{item.amount}}</span>
+        <span>{{item.name}}</span>
+        <i class="fa fa-times fa-1" ng-click="deleteGrocery($index)"></i>
+      </div>
     </li>
   </ul>
   <form>
-    <input class="add-input" placeholder="need something else?" type="text" ng-model="formitemText" ng-model-instant/>
-    <button class="add-btn" ng-click="additem()"><h2>Add</h2></button>
+    <h3>Add grocery item:</h3>
+    <input type="text" ng-model="groceryItem.amount" placeholder="1/2">
+    <select ng-model="groceryItem.type">
+      <option value="cup">Cups</option>
+      <option value="tbsp">Tablespoons</option>
+      <option value="tsp">Teaspoons</option>
+      <option value="pints">Pints</option>
+      <option value="qts">Quarts</option>
+      <option value="gallons">Gallons</option>
+    </select>
+    <input type="text" placeholder="Ingredient" ng-model="groceryItem.name">
+    <button class="add-btn" ng-click="additem(groceryItem)"><h2>Add</h2></button>
   </form>
 </div>

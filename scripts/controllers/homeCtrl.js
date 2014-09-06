@@ -5,6 +5,8 @@ angular.module("recipeApp-modules.controllers")
     $scope.posts = postService.getPosts();
     $scope.groceryList = postService.groceryList;
 
+    console.log($scope.posts);
+
     $scope.deleteRecipe = function(post){
 
       $scope.posts.splice(post, 1);
@@ -13,11 +15,9 @@ angular.module("recipeApp-modules.controllers")
 
     $scope.addToGrocery = function(index) {
 
-      var ingredients = _.pluck($scope.posts[index].ingredients, "name" );
+      for (var i = 0; i < $scope.posts[index].ingredients.length; i++) {
 
-      for (var i = 0; i < ingredients.length; i++) {
-
-        $scope.groceryList.push(ingredients[i]);
+        $scope.groceryList.push($scope.posts[index].ingredients[i]);
 
       };
 
