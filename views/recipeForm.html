@@ -1,38 +1,46 @@
-<h2>Add a new recipe:</h2>
+<div class="addWrap">
+
 <section>
+    <h2>Add a new recipe</h2>
 <form action="">
-  <h3>Title:</h3>
-  <input type="text" ng-model="newRecipe.title">
-  <h3>Ingredients:</h3>
-  <input type="text" ng-model="ingredients.amount" placeholder="1/2">
+    <div class="col1">
+  <h3>Title:</h3><input type="text" ng-model="newRecipe.title" placeholder="Title"></p>
+  <h3>Ingredients:</h3><p>
+  <input type="text" style="width:70px;" ng-model="ingredients.amount" placeholder="Amount">
   <select ng-model="ingredients.type">
-    <option value="cup">Cups</option>
-    <option value="tbsp">Tablespoons</option>
-    <option value="tsp">Teaspoons</option>
-    <option value="pints">Pints</option>
-    <option value="qts">Quarts</option>
-    <option value="gallons">Gallons</option>
-  </select>
+    <option value="">_</option>
+    <option value="cup">cups</option>
+    <option value="tbsp">tbsp</option>
+    <option value="tsp">tsp</option>
+    <option value="pints">pints</option>
+    <option value="qts">quarts</option>
+    <option value="gallons">gallons</option>
+</select></p>
   <input type="text" placeholder="Ingredient" ng-model="ingredients.name">
-  <button ng-click="addIngredient(ingredients)">Add</button>
+  <button ng-click="addIngredient(ingredients)">ADD</button>
   <ul>
     <li ng-repeat="ingredient in ingredientArray">
       <h4>{{ingredient.amount}} {{ingredient.type}} {{ingredient.name}} </h4>
     </li>
-  </ul>
+</ul>
+</div>
+    <div class="col2">
   <h3>Instructions:</h3>
-  <textarea ng-model="newRecipe.instructions" name="" id="" cols="30" rows="10">Instructions</textarea>
-  <input type="submit" ng-click="recipeSubmit(newRecipe)">Finish Recipe</input>
+  <textarea ng-model="newRecipe.instructions" name="" id="" cols="23" rows="5"></textarea><br>
+  <button type="submit" ng-click="recipeSubmit(newRecipe)">SUBMIT</button>
 </form>
+    </div>
 </section>
+
 <aside>
-  <h2>Recipe Preview:</h2>
+  <h2>Recipe Preview</h2>
   <h3>{{newRecipe.title}}</h3>
   <ul>
     <li ng-repeat="ingredient in ingredientArray">
       <h4>{{ingredient.amount}} {{ingredient.type}} {{ingredient.name}} </h4>
     </li>
   </ul>
-  <h3>Directions</h3>
-  <p>{{newRecipe.instructions}}</p>
+  <h3>Directions:</h3>
+  <textarea= class="directions">{{newRecipe.instructions}}</textarea>
 </aside>
+</div>
