@@ -64,7 +64,7 @@ img.bg {
  }
 
 
- .fa {
+.fa {
      font-size:3em;
      color:white;
      margin: 0px; margin-top: 5px; margin-right:5px;
@@ -74,11 +74,34 @@ img.bg {
 
  }
 
+
+.edit {
+    font-size:1.3em;
+    opacity:.8;
+    transition:all .3s ease-in-out;
+}
+
+.edit:hover {
+    font-size:1.5em;
+    cursor:pointer;
+    opacity:1;
+}
+
+.add, .del {
+    font-size:1em;
+    opacity:1;
+}
+
+
+
+
 #first:hover {
     color:#EB8921;
+    transform: scale(1.2);
 }
 #second:hover {
     color:#FF6347;
+    transform: scale(1.2);
 }
 
 

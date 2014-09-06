@@ -13,8 +13,9 @@
       <h2>Ingredients:</h2>
       <div ng-repeat="ingredient in recipe.ingredients">
         <div ng-hide="editIngredient">
+        <i ng-click="editIngredient = true" class="fa fa-pencil-square-o edit"></i>
           {{ingredient.amount}} {{ingredient.type}} {{ingredient.name}}
-          <button ng-click="editIngredient = true">Edit</button>
+
         </div>
         <form ng-show="editIngredient" ng-submit="editIngredient = false">
           <input type="text" ng-model="ingredient.amount" placeholder="Amount">
@@ -25,17 +26,20 @@
       </div>
       <h2>Directions:</h2>
       <div class="directions" ng-hide="editDirections">
-        {{recipe.directions}}
+        {{recipe.directions}}<br>
         <button ng-click="editDirections = true">Edit Directions</button>
+        <button ng-class="class" ng-click="addToGrocery($index); changeClass()" ng-disabled="disabled">
+            <i class="fa fa-plus add"></i>
+        </button>
+        <button ng-click="deleteRecipe($index)">
+            <i class="fa fa-bomb del"></i>
+        </button>
       </div>
+
       <form ng-show="editDirections" ng-submit="editDirections = false">
         <textarea name="" id="" cols="100" rows="10" ng-model="recipe.directions">{{recipe.directions}}</textarea>
-        <button type="submit">Submit</button>
+        <br><button type="submit">Submit</button>
       </form>
-      <div>
-        <button class="homeButtons" ng-class="class" ng-click="addToGrocery($index); changeClass()" ng-disabled="disabled">Add</button>
-        <button class="homeButtons" ng-click="deleteRecipe($index)">Delete</button>
-      </div>
 
 
 
