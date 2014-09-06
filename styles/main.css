@@ -1,9 +1,11 @@
-html, body {
+body, html {
   height: 100%;
   background-image: url("../images/bg.png");
   background-size: cover;
-  background-repeat: no-repeat;
-  overflow: hidden; }
+  background-repeat: no-repeat; }
+
+h3 {
+  font-weight: lighter; }
 
 h2, h3 {
   color: white; }
@@ -46,11 +48,14 @@ img.bg {
   margin-top: 5px;
   margin-right: 5px;
   opacity: 0.6;
-  text-align: right;
-  transition: opacity 0.3s ease-in-out; }
+  text-align: center;
+  transition: all 0.3s ease-in-out; }
 
-.fa:hover {
-  opacity: 1; }
+#first:hover {
+  color: #EB8921; }
+
+#second:hover {
+  color: #FF6347; }
 
 .accHead {
   overflow: auto;
@@ -75,15 +80,22 @@ img.bg {
   margin-right: 10%; }
 
 .groceryWrap {
-  background-color: rgba(104, 92, 97, 0.7);
-  border: 1px solid white;
-  border-radius: 10px;
-  color: white;
-  font-family: 'Cutive', serif; }
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 1.3em;
+  padding: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+  overflow: auto;
+  color: white; }
+  .groceryWrap .fa {
+    font-size: 1em; }
+  .groceryWrap .fa:hover {
+    color: red; }
+  .groceryWrap input {
+    width: 150px; }
 
 .addWrap {
   width: 100%;
-  height: 60%;
   margin: 10px;
   overflow: auto; }
   .addWrap ul {
@@ -91,8 +103,6 @@ img.bg {
   .addWrap h2 {
     text-align: center;
     text-decoration: underline; }
-  .addWrap h3 {
-    font-weight: lighter; }
 
 section {
   display: inline-block;
