@@ -1,7 +1,10 @@
 
 <div ng-controller="homeCtrl">
+
+<!-- <div class="alert alert-{{alert.type}} animate-repeat" ng-repeat="alert in alerts">{{ alert.msg }}</div> -->
+
 <div class="homeWrap">
-<h2>Recipes</h2>
+<h2 class="flash">Recipes</h2>
 <accordion close-others="oneAtATime">
     <div class="accHead">
     <accordion-group is-open="status.open" ng-repeat="recipe in posts">
@@ -18,7 +21,8 @@
 
         <div>
 
-        <button class="homeButtons" ng-click="addToGrocery($index)" ng-disabled="disabled">Add</button>
+
+        <button ng-class="class" class="homeButtons" ng-click="addToGrocery($index); changeClass();" ng-disabled="disabled">Add</button>
         <button class="homeButtons" ng-click="deleteRecipe($index)">Delete</button>
 
       </div>
