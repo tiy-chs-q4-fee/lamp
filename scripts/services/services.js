@@ -38,23 +38,18 @@ angular.module("recipeApp-modules.services")
 
     }];
 
+    var groceryList = [];
+
 
     var getPosts = function () {
+
         return posts;
-    };
 
-    var createPost = function (newPost) {
-      posts.push(newPost);
-    };
-
-    var deletePost = function (idx) {
-      posts.splice(idx, 1);
     };
 
     // return methods
     return {
       getPosts: getPosts,
-      createPost: createPost,
-      deletePost: deletePost
+      groceryList: groceryList,
     };
   });
