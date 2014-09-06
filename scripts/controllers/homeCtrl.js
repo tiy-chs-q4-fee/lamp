@@ -22,7 +22,7 @@ angular.module("recipeApp-modules.controllers")
 
       };
 
-      $scope.disabled = true;
+      this.disabled = true;
 
     };
 
