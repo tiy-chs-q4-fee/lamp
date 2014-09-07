@@ -7,6 +7,7 @@
   <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="icon" type="image/ico" href="favicon.ico"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
 </head>
 <body ng-app="recipeApp-modules">
@@ -21,7 +22,7 @@
     </header>
 
     <div class="container">
-    <ng-view></ng-view>
+    <ng-view class="slideup">
     </div>
 
 
@@ -29,6 +30,7 @@
 
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
 <script src="bower_components/underscore/underscore.js"></script>
 <script src="bower_components/angular-underscore-module/angular-underscore-module.js"></script>
 <script src="scripts/app.js"></script>

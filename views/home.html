@@ -1,8 +1,8 @@
 <div ng-controller="homeCtrl">
-<div class="homeWrap">
+<div class="homeWrap slide">
 
 
-<h2><span><input type="text" placeholder="Search Recipes" ng-model="recipe.title"></span> </h2> 
+<h2><span><input type="text" placeholder="Search Recipes" ng-model="recipe.title"></span> </h2>
 <accordion close-others="oneAtATime">
     <div class="accHead">
     <accordion-group is-open="status.open" ng-repeat="recipe in posts | filter: recipe.title">
@@ -28,10 +28,10 @@
       <div class="directions" ng-hide="editDirections">
         {{recipe.directions}}<br>
         <button ng-click="editDirections = true">Edit Directions</button>
-        <button tooltip="Add ingredients to grocery list" ng-class="class" ng-click="addToGrocery($index); changeClass()" ng-disabled="disabled">
+        <button ng-class="class" ng-click="addToGrocery($index); changeClass()" ng-disabled="disabled">
             <i class="fa fa-plus add"></i>
         </button>
-        <button tooltip="Delete recipe" ng-click="deleteRecipe($index)">
+        <button ng-click="deleteRecipe($index)">
             <i class="fa fa-bomb del"></i>
         </button>
       </div>
