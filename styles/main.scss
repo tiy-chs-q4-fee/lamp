@@ -15,6 +15,14 @@ h2, h3 {
     color:white;
 }
 
+h2 {
+    span {
+        padding:2px;
+        font-size:.7em;
+        font-weight:lighter;
+    }
+}
+
 header {
     width:100%;
     text-align:center;
@@ -219,7 +227,7 @@ select {
 
 
 ////////////IPHONE5
-@media screen and (device-aspect-ratio: 40/71), screen and (device-aspect-ratio: 3/4) {
+@media screen and (min-width:0) and (max-width:639px) {
 
      #homeLogo {
          max-width:300px;
@@ -238,11 +246,18 @@ select {
          margin-right:0;
      }
 
+    #hidden {
+        display:none;
+    }
      section {
          width:100%;
      }
      aside {
          display:none;
+     }
+
+     .addWrap {
+         margin:0;
      }
 
      .groceryWrap{
