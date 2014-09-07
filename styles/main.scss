@@ -188,17 +188,19 @@ img.bg {
 
 section {
     display:inline-block;
-    width:49%;
+    width:55%;
     background-color:rgba(0,0,0,.4);
     padding:10px;
     .col1 {
         display:inline-block;
-        width:230px;
+        width:200px;
         margin: 0; padding:0;
+
     }
     .col2 {
         display:inline-block;
-        width:230px;
+        width:150px;
+
         margin: 0; padding:0;
         vertical-align:top;
     }
@@ -207,7 +209,7 @@ section {
 
 aside {
     display:inline-block;
-    width:49%;
+    width:40%;
     background-color:rgba(0,0,0,.4);
     vertical-align:top;
     padding:10px;
@@ -229,7 +231,6 @@ select {
 }
 
 ////////////////////////////END ADDRECIPE
-
 .slideup {
     position: absolute;
     top: 0;
@@ -255,6 +256,7 @@ select {
 }
 .slideup.ng-leave-active {
     top: -100%;
+    opacity:0;
 }
 
 ////////////IPHONE5
