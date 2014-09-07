@@ -23,7 +23,7 @@ angular.module("recipeApp-modules", ["recipeApp-modules.controllers", "recipeApp
     })
     .when("/notFound",
     {
-      templateUrl: "views/home.html",
+      templateUrl: "views/notFound.html",
     })
     .otherwise({
       redirectTo:"/notFound",
