@@ -12,10 +12,19 @@
         {{recipe.title}}  <i id="hidden" class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
       </accordion-heading>
       <h2>Ingredients:</h2>
+      <div class="serveNum" ng-hide="editServe">
+        Serves:{{recipe.serves}}
+        <button ng-click="editServe = true">Change servings</button>
+      </div>
+      <form ng-show="editServe" ng-submit="editServe = false">
+        <textarea name="" id="" cols="1" rows="1" ng-model="recipe.serves">{{recipe.servess}}</textarea>
+        <br><button type="submit">Submit</button>
+      </form>
+
       <div ng-repeat="ingredient in recipe.ingredients">
         <div ng-hide="editIngredient">
         <i ng-click="editIngredient = true" class="fa fa-pencil-square-o edit"></i>
-          {{ingredient.amount}} {{ingredient.type}} {{ingredient.name}}
+          {{ingredient.amount * recipe.serves}} {{ingredient.type}} {{ingredient.name}}
 
         </div>
         <form ng-show="editIngredient" ng-submit="editIngredient = false">
