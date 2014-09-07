@@ -143,6 +143,9 @@ img.bg {
      height:100%;
      margin-left:10%;
      margin-right:10%;
+     textarea{
+       width: 100%;
+     }
  }
 
 
@@ -273,7 +276,9 @@ select {
          margin-left:0;
          margin-right:0;
      }
-
+    //  textarea{
+    //    width: 100%;
+    //  }
     #hidden {
         display:none;
     }
