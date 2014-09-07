@@ -6,8 +6,9 @@
 <form action="">
     <div class="col1">
   <h3>Title:</h3><input type="text" ng-model="newRecipe.title" placeholder="Title"></p>
+  <h3>Serves:</h3><input type="number" ng-model="newRecipe.serves" placeholder="Serves"></p>
   <h3>Ingredients:</h3><p>
-  <input type="text" style="width:70px;" ng-model="ingredients.amount" placeholder="Amount">
+  <input type="number" style="width:70px;" ng-model="ingredients.amount" placeholder="Amount">
   <select ng-model="ingredients.type">
     <option value="cup">cups</option>
     <option value="tbsp">tbsp</option>

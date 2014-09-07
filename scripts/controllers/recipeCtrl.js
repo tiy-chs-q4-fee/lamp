@@ -12,7 +12,8 @@ angular.module("recipeApp-modules.controllers")
 
       title: recipe.title,
       ingredients: $scope.ingredientArray,
-      directions: recipe.instructions
+      directions: recipe.instructions,
+      serves: recipe.serves
 
       });
 
