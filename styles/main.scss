@@ -15,6 +15,14 @@ h2, h3 {
     color:white;
 }
 
+h2 {
+    span {
+        padding:2px;
+        font-size:.7em;
+        font-weight:lighter;
+    }
+}
+
 header {
     width:100%;
     text-align:center;
@@ -216,3 +224,47 @@ select {
 }
 
 ////////////////////////////END ADDRECIPE
+
+
+////////////IPHONE5
+@media screen and (min-width:0) and (max-width:639px) {
+
+     #homeLogo {
+         max-width:300px;
+         height:auto;
+     }
+
+     .container {
+         padding-top:10px;
+         height:50%;
+     }
+
+     .homeWrap{
+         font-size:1.2em;
+         height:100%;
+         margin-left:0;
+         margin-right:0;
+     }
+
+    #hidden {
+        display:none;
+    }
+     section {
+         width:100%;
+     }
+     aside {
+         display:none;
+     }
+
+     .addWrap {
+         margin:0;
+     }
+
+     .groceryWrap{
+
+         padding:5px;
+         margin-left:0;
+         margin-right:0;
+     }
+
+}
