@@ -30,7 +30,15 @@
           </div>
           <form ng-show="editIngredient" ng-submit="editIngredient = false">
             <input type="text" ng-model="ingredient.amount" placeholder="Amount">
-            <input type="text" ng-model="ingredient.type" placeholder="Measurement Type">
+            <select ng-model="ingredient.type">
+              <option value="cup">cups</option>
+              <option value="tbsp">tbsp</option>
+              <option value="tsp">tsp</option>
+              <option value="oz">ounces</option>
+              <option value="pints">pints</option>
+              <option value="qts">quarts</option>
+              <option value="gallons">gallons</option>
+            </select>
             <input type="text" ng-model="ingredient.name" placeholder="Ingredient">
             <button type="submit">Submit</button>
           </form>
@@ -43,12 +51,20 @@
           </div>
           <form ng-show="editIngredient" ng-submit="editIngredient = false">
             <input type="text" ng-model="ingredient.amount" placeholder="Amount">
-            <input type="text" ng-model="ingredient.type" placeholder="Measurement Type">
+            <select ng-model="ingredient.type">
+              <option value="cup">cups</option>
+              <option value="tbsp">tbsp</option>
+              <option value="tsp">tsp</option>
+              <option value="oz">ounces</option>
+              <option value="pints">pints</option>
+              <option value="qts">quarts</option>
+              <option value="gallons">gallons</option>
+            </select>
             <input type="text" ng-model="ingredient.name" placeholder="Ingredient">
             <button type="submit">Submit</button>
           </form>
         </div>
-        
+
       </div>
       <h2>Directions:</h2>
       <div class="directions" ng-hide="editDirections">
