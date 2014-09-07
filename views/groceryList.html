@@ -7,8 +7,12 @@
         <span>{{item.name}}</span>
         <i class="fa fa-times fa-1" ng-click="deleteGrocery($index)"></i>
       </div>
-      <div ng-if="item.type === null">
+      <div ng-if="item.type === null && item.amount != null">
         <span>{{item.amount}}</span>
+        <span>{{item.name}}</span>
+        <i class="fa fa-times fa-1" ng-click="deleteGrocery($index)"></i>
+      </div>
+      <div ng-if="item.type === null && item.amount === null">
         <span>{{item.name}}</span>
         <i class="fa fa-times fa-1" ng-click="deleteGrocery($index)"></i>
       </div>
