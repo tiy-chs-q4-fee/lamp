@@ -105,6 +105,8 @@ img.bg {
   height: 100%;
   margin-left: 10%;
   margin-right: 10%; }
+  .homeWrap textarea {
+    width: 100%; }
 
 .groceryWrap {
   background-color: rgba(0, 0, 0, 0.4);
@@ -167,6 +169,31 @@ input, textarea {
 select {
   background-color: rgba(255, 255, 255, 0.001);
   color: white; }
+
+.slideup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%; }
+
+.slideup.ng-enter, .slideup.ng-leave {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease; }
+
+.slideup.ng-enter {
+  top: 100%; }
+
+.slideup.ng-enter-active {
+  top: 0; }
+
+.slideup.ng-leave {
+  top: 0; }
+
+.slideup.ng-leave-active {
+  top: -100%; }
 
 @media screen and (min-width: 0) and (max-width: 639px) {
   #homeLogo {
