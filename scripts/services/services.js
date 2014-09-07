@@ -3,7 +3,6 @@ angular.module("recipeApp-modules.services")
     var posts = [
     {
       title: "Crunch-Topped Mac and Cheese",
-
       ingredients: [{
 
         name: "unsalted butter",
@@ -104,8 +103,41 @@ angular.module("recipeApp-modules.services")
         type: null
       }],
       directions: "Split a baguette lengthwise and slice into pieces; arrange on a baking sheet. Combine 3 tablespoons olive oil, 1 finely chopped garlic clove and a pinch of salt. Brush on the bread, then top each piece with a slice of tomato and some grated parmesan. Bake at 400 degrees F until lightly toasted, about 8 minutes."
-
-    }];
+    },
+  {
+    title: "Peach & Almond Clafoutis",
+    ingredients: [{
+      name: "eggs",
+      amount: 4,
+      type: null
+    },
+    {
+      name: "sugar",
+      amount: 1/2,
+      type: "cup"
+    },
+    {
+      name: "salt",
+      amount: 1/4,
+      type: "tsp"
+    },
+    {
+      name: "nutmeg",
+      amount: 1/4,
+      type: "tsp"
+    },
+    {
+      name: "peaches",
+      amount: 4,
+      type: null
+    },
+    {
+      name: "almonds",
+      amount: 1/2,
+      type: "cup"
+    }],
+    directions: "Preheat the oven to 400° F. Combine the eggs and sugar. Whisk for 2 to 3 minutes until light and fluffy. Add the flour, salt, and nutmeg. Pour in the milk and the melted butter. Mix gently until you get a smooth batter. Butter a cake pan or baking dish and place the peaches all over the base. Pour the batter over the peaches and scatter the top with slivered almonds. Bake for 40 to 45 minutes, until risen and golden brown. Leave to cool before serving."
+  }];
 
     var groceryList = [];
 
