@@ -17,22 +17,54 @@
         <button ng-click="editServe = true">Change servings</button>
       </div>
       <form ng-show="editServe" ng-submit="editServe = false">
-        <textarea name="" id="" cols="1" rows="1" ng-model="recipe.serves">{{recipe.servess}}</textarea>
+        <textarea name="" id="" cols="1" rows="1" ng-model="recipe.serves">{{recipe.serves}}</textarea>
         <br><button type="submit">Submit</button>
       </form>
 
       <div ng-repeat="ingredient in recipe.ingredients">
-        <div ng-hide="editIngredient">
-        <i ng-click="editIngredient = true" class="fa fa-pencil-square-o edit"></i>
-          {{ingredient.amount * recipe.serves}} {{ingredient.type}} {{ingredient.name}}
 
+        <div ng-if="ingredient.amount != null" class="ingredientContainer">
+          <div ng-hide="editIngredient">
+          <i ng-click="editIngredient = true" class="fa fa-pencil-square-o edit"></i>
+            {{ingredient.amount * recipe.serves}} {{ingredient.type}} {{ingredient.name}}
+          </div>
+          <form ng-show="editIngredient" ng-submit="editIngredient = false">
+            <input type="text" ng-model="ingredient.amount" placeholder="Amount">
+            <select ng-model="ingredient.type">
+              <option value="cup">cups</option>
+              <option value="tbsp">tbsp</option>
+              <option value="tsp">tsp</option>
+              <option value="oz">ounces</option>
+              <option value="pints">pints</option>
+              <option value="qts">quarts</option>
+              <option value="gallons">gallons</option>
+            </select>
+            <input type="text" ng-model="ingredient.name" placeholder="Ingredient">
+            <button type="submit">Submit</button>
+          </form>
         </div>
-        <form ng-show="editIngredient" ng-submit="editIngredient = false">
-          <input type="text" ng-model="ingredient.amount" placeholder="Amount">
-          <input type="text" ng-model="ingredient.type" placeholder="Measurement Type">
-          <input type="text" ng-model="ingredient.name" placeholder="Ingredient">
-          <button type="submit">Submit</button>
-        </form>
+
+        <div ng-if="ingredient.amount === null" class="ingredientContainer">
+          <div ng-hide="editIngredient">
+          <i ng-click="editIngredient = true" class="fa fa-pencil-square-o edit"></i>
+            {{ingredient.amount}} {{ingredient.type}} {{ingredient.name}}
+          </div>
+          <form ng-show="editIngredient" ng-submit="editIngredient = false">
+            <input type="text" ng-model="ingredient.amount" placeholder="Amount">
+            <select ng-model="ingredient.type">
+              <option value="cup">cups</option>
+              <option value="tbsp">tbsp</option>
+              <option value="tsp">tsp</option>
+              <option value="oz">ounces</option>
+              <option value="pints">pints</option>
+              <option value="qts">quarts</option>
+              <option value="gallons">gallons</option>
+            </select>
+            <input type="text" ng-model="ingredient.name" placeholder="Ingredient">
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+
       </div>
       <h2>Directions:</h2>
       <div class="directions" ng-hide="editDirections">
