@@ -2,7 +2,7 @@
 <div class="groceryWrap" ng-controller="groceryController">
 <h2>Groceries:</h2>
   <ul>
-    <li ng-repeat="item in groceryList">
+    <li ng-repeat="item in groceryList track by $index">
       <div ng-if="item.type != null">
         <span>{{item.name}}</span>
         <i class="fa fa-times fa-1" ng-click="deleteGrocery($index)"></i>
