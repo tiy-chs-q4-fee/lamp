@@ -2,7 +2,7 @@
 <div class="homeWrap">
 
 
-<h2><span><input type="text" placeholder="Search Recipes" ng-model="recipe.title"></span> </h2> 
+<h2><span><input type="text" placeholder="Search Recipes" ng-model="recipe.title"></span> </h2>
 <accordion close-others="oneAtATime">
     <div class="accHead">
     <accordion-group is-open="status.open" ng-repeat="recipe in posts | filter: recipe.title">
