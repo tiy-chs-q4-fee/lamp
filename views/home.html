@@ -2,13 +2,13 @@
 <div class="homeWrap">
 
 
-<h2>Recipes</h2>
+<h2><span><input type="text" placeholder="Search Recipes" ng-model="recipe.title"></span> </h2> 
 <accordion close-others="oneAtATime">
     <div class="accHead">
-    <accordion-group is-open="status.open" ng-repeat="recipe in posts">
+    <accordion-group is-open="status.open" ng-repeat="recipe in posts | filter: recipe.title">
 
       <accordion-heading>
-        {{recipe.title}}  <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+        {{recipe.title}}  <i id="hidden" class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
       </accordion-heading>
       <h2>Ingredients:</h2>
       <div ng-repeat="ingredient in recipe.ingredients">
