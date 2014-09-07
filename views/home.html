@@ -23,7 +23,7 @@
       <div ng-repeat="ingredient in recipe.ingredients">
         <div ng-hide="editIngredient">
         <i ng-click="editIngredient = true" class="fa fa-pencil-square-o edit"></i>
-          {{ingredient.amount}} {{ingredient.type}} {{ingredient.name}}
+          {{ingredient.amount * recipe.serves}} {{ingredient.type}} {{ingredient.name}}
 
         </div>
         <form ng-show="editIngredient" ng-submit="editIngredient = false">
