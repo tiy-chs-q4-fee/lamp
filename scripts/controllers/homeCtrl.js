@@ -26,10 +26,8 @@ angular.module("recipeApp-modules.controllers")
 
     };
 
-
       $scope.changeClass = function () {
           this.class = "disabled";
       }
-
 
   });
