@@ -96,8 +96,7 @@ img.bg {
 .container {
   overflow: auto;
   position: absolute;
-  bottom: 1px;
-  height: 60%;
+  height: 100%;
   width: 100%; }
 
 .homeWrap {
@@ -112,6 +111,7 @@ img.bg {
   background-color: rgba(0, 0, 0, 0.4);
   font-size: 1.3em;
   padding: 10px;
+  margin-top: 10px;
   margin-left: 10%;
   margin-right: 10%;
   overflow: auto;
@@ -135,12 +135,12 @@ img.bg {
 
 section {
   display: inline-block;
-  width: 55%;
+  width: 57%;
   background-color: rgba(0, 0, 0, 0.4);
   padding: 10px; }
   section .col1 {
     display: inline-block;
-    width: 200px;
+    width: 220px;
     margin: 0;
     padding: 0; }
   section .col2 {
@@ -170,30 +170,29 @@ select {
   background-color: rgba(255, 255, 255, 0.001);
   color: white; }
 
-.slideup {
+.slide {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%; }
+  width: 100%;
+  height: 55%;
+  bottom: 0px; }
 
-.slideup.ng-enter, .slideup.ng-leave {
+.slide.ng-enter, .slide.ng-leave {
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease; }
 
-.slideup.ng-enter {
-  top: 100%; }
+.slide.ng-enter {
+  left: 100%; }
 
-.slideup.ng-enter-active {
-  top: 0; }
+.slide.ng-enter-active {
+  left: 0; }
 
-.slideup.ng-leave {
-  top: 0; }
+.slide.ng-leave {
+  left: 0; }
 
-.slideup.ng-leave-active {
-  top: -100%;
+.slide.ng-leave-active {
+  left: -100%;
   opacity: 0; }
 
 @media screen and (min-width: 0) and (max-width: 639px) {
@@ -201,8 +200,7 @@ select {
     max-width: 300px;
     height: auto; }
   .container {
-    padding-top: 10px;
-    height: 50%; }
+    padding-top: 10px; }
   .homeWrap {
     font-size: 1.2em;
     height: 100%;
