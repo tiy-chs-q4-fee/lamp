@@ -3,7 +3,7 @@ angular.module("recipeApp-modules.services")
     var posts = [
     {
       title: "Crunch-Topped Mac and Cheese",
-      serves:4,
+      serves:1,
       ingredients: [{
 
         name: "unsalted butter",
@@ -73,7 +73,7 @@ angular.module("recipeApp-modules.services")
       directions: "Melt 1 tablespoon butter in a medium skillet over medium heat. Add the paprika, turmeric and panko and cook, stirring, until the panko is lightly toasted, about 3 minutes; transfer to a small bowl and set aside for topping. Bring a large pot of salted water to a boil. Add the carrots and cook until tender, 10 minutes; remove with a slotted spoon and transfer to a blender. Add the macaroni to the pot and cook as the label directs. Reserve 1 cup of the cooking water, then drain the pasta. Add half of the reserved cooking water to the blender with the carrots and puree until smooth. Melt the remaining 1 tablespoon butter in a medium saucepan over medium heat; whisk in the flour and mustard powder and cook, whisking, 1 minute. Whisk in the evaporated milk and carrot puree; simmer, whisking, until slightly thickened, about 5 minutes. Stir in the cheeses until melted. Add the pasta and stir to coat, adding the remaining cooking water as needed to loosen the sauce. Season with salt and pepper. Divide among bowls and top with the panko mixture."},
     {
       title: "Tomato-Garlic Bread",
-      serves:4,
+      serves:1,
       ingredients: [{
         name: "baguette",
         amount: 1,
@@ -108,6 +108,7 @@ angular.module("recipeApp-modules.services")
     },
   {
     title: "Peach & Almond Clafoutis",
+    serves:1,
     ingredients: [{
       name: "eggs",
       amount: 4,

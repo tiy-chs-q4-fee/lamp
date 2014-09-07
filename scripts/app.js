@@ -1,4 +1,4 @@
-angular.module("recipeApp-modules", ["recipeApp-modules.controllers", "recipeApp-modules.services", "ngAnimate", "ngRoute", "ui.bootstrap", "underscore" ])
+angular.module("recipeApp-modules", ["recipeApp-modules.controllers", "recipeApp-modules.services", "ngRoute", "ui.bootstrap", "underscore" ])
   .config(function($routeProvider){
     $routeProvider
     .when("/",
@@ -23,7 +23,7 @@ angular.module("recipeApp-modules", ["recipeApp-modules.controllers", "recipeApp
     })
     .when("/notFound",
     {
-      templateUrl: "views/notFound.html",
+      templateUrl: "views/home.html",
     })
     .otherwise({
       redirectTo:"/notFound",
