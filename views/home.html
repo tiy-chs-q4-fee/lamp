@@ -22,17 +22,33 @@
       </form>
 
       <div ng-repeat="ingredient in recipe.ingredients">
-        <div ng-hide="editIngredient">
-        <i ng-click="editIngredient = true" class="fa fa-pencil-square-o edit"></i>
-          {{ingredient.amount * recipe.serves}} {{ingredient.type}} {{ingredient.name}}
 
+        <div ng-if="ingredient.amount != null" class="ingredientContainer">
+          <div ng-hide="editIngredient">
+          <i ng-click="editIngredient = true" class="fa fa-pencil-square-o edit"></i>
+            {{ingredient.amount * recipe.serves}} {{ingredient.type}} {{ingredient.name}}
+          </div>
+          <form ng-show="editIngredient" ng-submit="editIngredient = false">
+            <input type="text" ng-model="ingredient.amount" placeholder="Amount">
+            <input type="text" ng-model="ingredient.type" placeholder="Measurement Type">
+            <input type="text" ng-model="ingredient.name" placeholder="Ingredient">
+            <button type="submit">Submit</button>
+          </form>
         </div>
-        <form ng-show="editIngredient" ng-submit="editIngredient = false">
-          <input type="text" ng-model="ingredient.amount" placeholder="Amount">
-          <input type="text" ng-model="ingredient.type" placeholder="Measurement Type">
-          <input type="text" ng-model="ingredient.name" placeholder="Ingredient">
-          <button type="submit">Submit</button>
-        </form>
+
+        <div ng-if="ingredient.amount === null" class="ingredientContainer">
+          <div ng-hide="editIngredient">
+          <i ng-click="editIngredient = true" class="fa fa-pencil-square-o edit"></i>
+            {{ingredient.amount}} {{ingredient.type}} {{ingredient.name}}
+          </div>
+          <form ng-show="editIngredient" ng-submit="editIngredient = false">
+            <input type="text" ng-model="ingredient.amount" placeholder="Amount">
+            <input type="text" ng-model="ingredient.type" placeholder="Measurement Type">
+            <input type="text" ng-model="ingredient.name" placeholder="Ingredient">
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        
       </div>
       <h2>Directions:</h2>
       <div class="directions" ng-hide="editDirections">
