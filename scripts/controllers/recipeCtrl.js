@@ -23,7 +23,13 @@ angular.module("recipeApp-modules.controllers")
 
     $scope.addIngredient = function(ingredient) {
 
-      $scope.ingredientArray.push(ingredient);
+      $scope.ingredientArray.push({
+
+        name:ingredient.name,
+        type:ingredient.type,
+        amount:ingredient.amount || null
+
+      });
       $scope.ingredients = {};
 
       console.log($scope.ingredientArray);

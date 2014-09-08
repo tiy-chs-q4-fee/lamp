@@ -19,6 +19,7 @@ angular.module("recipeApp-modules.controllers")
       for (var i = 0; i < $scope.posts[index].ingredients.length; i++) {
 
         $scope.groceryList.push($scope.posts[index].ingredients[i]);
+        console.log($scope.groceryList);
 
       };
 
